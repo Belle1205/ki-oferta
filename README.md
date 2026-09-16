@@ -1,18 +1,3 @@
-Respostas de A1 até A6
-
-A1:
-
-A2:
-
-A3:
-
-A4:
-
-A5:
-
-A6:
-
-
 # Ki-Oferta
 
 > **Projeto em construção.** Este repositório está em desenvolvimento ativo como projeto de estudos (FATEC) e ainda não representa uma versão final.
@@ -80,6 +65,31 @@ O projeto segue uma estrutura simples de **SPA (Single Page Application) em Java
 
 Este projeto usa o [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app) como base. Para sincronizar o build web com os projetos nativos (Android/iOS), consulte a [documentação do Capacitor](https://capacitorjs.com/docs) — em resumo, após o `npm run build`, é necessário adicionar a plataforma desejada e sincronizar os arquivos web com o projeto nativo antes de rodar em um emulador ou dispositivo.
 
-## Status
+Atividade – Framework CSS
+Framework escolhido: Bootstrap
+A1. O que é o framework e qual abordagem ele segue?
+O Bootstrap é um framework CSS que oferece estilos, classes e componentes prontos para facilitar a criação de interfaces web. Ele utiliza uma abordagem responsiva e mobile-first, priorizando inicialmente telas menores e permitindo adaptar a interface para diferentes tamanhos de tela.
 
-Este é um projeto didático em construção. Funcionalidades, estrutura de pastas e padrões podem mudar conforme o aprendizado avança.
+A2. Como você incluiu o framework na página?
+O Bootstrap pode ser incluído no projeto por meio de um link CDN no arquivo HTML, permitindo utilizar suas classes sem a necessidade de armazenar os arquivos do framework localmente. A forma de inclusão utilizada no projeto será conferida durante a revisão da implementação.
+
+A3. Cite três benefícios percebidos ao usar.
+Entre os principais benefícios observados estão a facilidade para organizar os elementos da tela, a disponibilidade de classes prontas que reduzem a quantidade de CSS que precisa ser escrita e o suporte à criação de layouts responsivos para diferentes tamanhos de tela.
+
+A4. Cite duas limitações ou desvantagens.
+Uma limitação é que o Bootstrap pode deixar a interface com uma aparência padronizada quando seus componentes são utilizados sem personalização. Outra é que, em um projeto que já possui cores, tipografia e espaçamentos próprios, pode ser necessário sobrescrever estilos do framework, aumentando o trabalho de personalização.
+
+A5. O framework estiliza usando classes ou IDs? Por quê?
+O Bootstrap utiliza principalmente classes CSS. As classes podem ser reutilizadas em vários elementos da página, enquanto um ID deve identificar um elemento específico. O uso de classes também facilita a aplicação e a personalização dos estilos em diferentes partes da interface.
+
+A6. Fontes
+Bootstrap. "Get started with Bootstrap". Documentação oficial do Bootstrap.
+Endereço: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+Acesso em: 15 set. 2026.
+
+MDN Web Docs. "CSS selectors". Mozilla Developer Network.
+Endereço: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors
+Acesso em: 15 set. 2026.
+
+Decisão para o projeto
+O Bootstrap pode ser útil no KiOferta para facilitar a organização do layout e oferecer recursos responsivos. Entretanto, o estudo de caso já define cores, tipografia e espaçamentos próprios. Por isso, consideramos mais adequado utilizá-lo apenas quando seus recursos trouxerem alguma vantagem para a estrutura da interface, mantendo o CSS próprio para preservar a identidade visual definida para o KiOferta.
