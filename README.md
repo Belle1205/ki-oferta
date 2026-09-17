@@ -80,11 +80,11 @@ O Bootstrap é um framework CSS que oferece estilos, classes e componentes pront
 
 #### A2. Como você incluiu o framework na página?
 
-O Bootstrap pode ser incluído no projeto por meio de um link CDN no arquivo HTML, permitindo utilizar suas classes sem a necessidade de armazenar os arquivos do framework localmente. A forma de inclusão utilizada no projeto será conferida durante a revisão da implementação.
+O Bootstrap não foi incluído na implementação da tela do KiOferta. O framework foi pesquisado para esta atividade, mas o grupo optou por desenvolver a interface utilizando CSS próprio, com recursos nativos como Flexbox e Grid.
 
 #### A3. Cite três benefícios percebidos ao usar.
 
-Entre os principais benefícios observados estão a facilidade para organizar os elementos da tela, a disponibilidade de classes prontas que reduzem a quantidade de CSS que precisa ser escrita e o suporte à criação de layouts responsivos para diferentes tamanhos de tela.
+Embora o Bootstrap não tenha sido utilizado na implementação final da tela, durante a pesquisa identificamos como benefícios a disponibilidade de classes prontas, a facilidade para desenvolver layouts responsivos e a possibilidade de reduzir a quantidade de CSS que precisaria ser escrita manualmente.
 
 #### A4. Cite duas limitações ou desvantagens.
 
