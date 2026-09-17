@@ -1,7 +1,7 @@
 # Integrantes do Grupo:
-Anabelle de Moraes
-Gabriela Silveira
-Fabio
+Anabelle de Moraes;
+Gabriela Silveira;
+Fabio;
 Roberta
 
 # Ki-Oferta
