@@ -1,3 +1,9 @@
+# Integrantes do Grupo:
+Anabelle de Moraes
+Gabriela Silveira
+Fabio
+Roberta
+
 # Ki-Oferta
 
 > **Projeto em construção.** Este repositório está em desenvolvimento ativo como projeto de estudos (FATEC) e ainda não representa uma versão final.
