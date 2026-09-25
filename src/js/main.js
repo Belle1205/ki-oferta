@@ -5,7 +5,7 @@ const app = document.getElementById("app")
 navbar(mapaderotas)
 
 function renderizarPagina() {
-    const hash = window.location.hash || '#home'
+    const hash = window.location.hash || '#buscar'
     const rota  = mapaderotas.find(tela => tela.url === hash)
     console.log(rota)
     if (rota) {

@@ -6,6 +6,7 @@ navbar.innerHTML = `
             item_menu.filter(menu=> menu.label !== "")
             .map((item)=>{
                 return `<li><a href="${item.url}" class="navbar-item">${item.label}</a></li>`
+       
             }).join('')
         }
 </nav>`;
