@@ -1,31 +1,24 @@
 import './produtos.css'
-import listaDeProdutos from '../paginas/produtos/produto.js'
+import listaDeProdutos from '../../dadosMockados/dados.js'
 
 function produtos(app) {
     app.innerHTML = `
     <div>
     <h1>Página produtos</h1>
     ${
-        listaDeProdutos.map((produto)=>{
-            // div pai
-            return `<div class="produto"> 
-            
-                        <div class="produto-imagem">
-                            <img src="${produto.img}" alt = "A imagem de um produto class="image-produto">
-                            <h3>${produto.nome}</h3>
-                        
-                        </div>
-
-                        <div class="preco-distancia">
-                            <p class="preco-especial">R$ ${produto.preco}</p>
-                            <p>${produto.distancia} mt</p>
-                        
-                        </div>
-
-
-                    </div>`
-
-        } )
+        listaDeProdutos.map((produto) => {
+            return `
+                <div class="produto"> 
+                    <div class="produto-imagem">
+                        <img src="${produto.img}" alt="A imagem de um produto" class="image-produto" />
+                        <h3>${produto.nome}</h3>
+                    </div>
+                    <div class="preco-distancia">
+                        <p class="preco-especial">R$ ${produto.preco}</p>
+                        <p>${produto.distancia} mt</p>
+                    </div>
+                </div>`
+        }).join('')
     }
     </div>`
     window.location.hash = "#produtos"
@@ -33,7 +26,7 @@ function produtos(app) {
 
 export default { 
     url: "#produtos",
-    label: "",
+    label: "produtos",
     icon: "shopping-basket",
     pagina: produtos
  };

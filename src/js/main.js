@@ -1,3 +1,4 @@
+import { createIcons, icons } from 'lucide';
 import { mapaderotas } from './rotas/rotas.js'
 import { navbar } from './navbar/navbar.js'
 
@@ -16,3 +17,4 @@ window.addEventListener("hashchange", ()=>{
     renderizarPagina()
 })
 renderizarPagina()
+createIcons({ icons });

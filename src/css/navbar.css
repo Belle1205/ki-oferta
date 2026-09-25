@@ -1,31 +1,69 @@
+/* ensure sizing includes padding/borders */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .navbar-bottom{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 72px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style-type: none;
-    gap: 12%;
-    position: fixed;
-    bottom: 0;
-    width:440px;
-    height: 60px;
+    list-style: none;
     border-top: 1px solid #da9797;
+    background: #fff;
+    z-index: 1000;
 }
 
 .navbar{
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #5a5959;
-    padding-bottom: 15px;
-    gap:15px;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
 }
 
 .navbar-item{
     text-decoration: none;
     color: #5a5959;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 8px;
+    min-width: 48px;
 }
 
+.navbar-item_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    font-size: 1.2rem;
+    gap: 5px;
+    text-align: center;
+}
+
+.navbar-item:focus,
 .navbar-item:hover{
-    border-top: 2px solid blue;
+    opacity: 0.95;
+}
+
+/* ensure the navbar doesn't overflow small screens */
+@media (max-width: 480px) {
+    .navbar {
+        gap: 8px;
+        padding: 6px 6px;
+    }
+    .navbar-item { padding: 6px 4px; }
 }
 
