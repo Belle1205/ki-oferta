@@ -1,13 +1,15 @@
-import home from '../paginas/home.js'
-import sobre from '../paginas/sobre.js'
-import produtos from '../paginas/produtos.js'
+import buscar from '../paginas/buscar.js'
 import enviar from '../paginas/enviar.js'
+import mapa from '../paginas/mapa.js'
+import favorito from '../paginas/favorito.js'
+import conta from '../paginas/conta.js'
 
 const mapaderotas = [
-    home,
-    sobre,
+    buscar,
+    mapa,
     enviar,
-    produtos,
+    favorito,
+    conta
 ]
 
 export { mapaderotas }

@@ -1,21 +1,20 @@
+import { createIcons, icons } from 'lucide';
 import { mapaderotas } from './rotas/rotas.js'
 import { navbar } from './navbar/navbar.js'
 
 const app = document.getElementById("app")
 navbar(mapaderotas)
-function render(){
-    const hash = window.location.hash || ""
-    const [caminho, busca = ""] = hash.split("?")
-    const parametros = new URLSearchParams(busca)
-    const rota = mapaderotas.find(tela => tela.url === caminho)
+
+function renderizarPagina() {
+    const hash = window.location.hash || '#buscar'
+    const rota  = mapaderotas.find(tela => tela.url === hash)
+    console.log(rota)
     if (rota) {
-        rota.pagina(app, parametros)
-    } else{
-        app.innerHTML = "<h1>404 - Página não encontrada</h1>"
+        rota.pagina(app)
     }
 }
-
-render()
 window.addEventListener("hashchange", ()=>{
-    render()
+    renderizarPagina()
 })
+renderizarPagina()
+createIcons({ icons });

@@ -1,5 +1,3 @@
-// src/paginas/enviar.js
- 
 async function enviar(app) {
   app.innerHTML = `
     <header><h1>Enviar promoção</h1></header>
@@ -26,7 +24,8 @@ async function enviar(app) {
     </form>`;
 }
 export default { 
-    url: '#enviar', 
-    label: 'Enviar', 
-    pagina: enviar 
-};
+  url: '#enviar',
+   label: 'Enviar',
+   icon: "arrow-up-from-line",
+    pagina: enviar
+   };
