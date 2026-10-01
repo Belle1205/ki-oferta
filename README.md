@@ -1,109 +1,12 @@
-# Ki-Oferta
+## Created with Capacitor Create App
 
-> **Projeto em construção.** Este repositório está em desenvolvimento ativo como projeto de estudos (FATEC) e ainda não representa uma versão final.
+This app was created using [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app),
+and comes with a very minimal shell for building an app.
 
-## Sobre o projeto
+### Running this example
 
-O Ki-Oferta é um modelo de aplicação criado com duas frentes de aprendizado em mente:
+To run the provided example, you can use `npm start` command.
 
-1. **Desenvolvimento web moderno** — uso de ferramentas atuais de build e um fluxo de trabalho baseado em módulos JavaScript (ES Modules), organização de código em componentes/páginas e boas práticas de estruturação de projeto front-end.
-2. **Conceitos de desenvolvimento de aplicativos** — o mesmo código-fonte web é empacotado como um aplicativo mobile nativo (Android/iOS) usando o [Capacitor](https://capacitorjs.com/), permitindo estudar como uma aplicação web se transforma em um app instalável, com acesso a APIs nativas do dispositivo (câmera, splash screen, etc.).
-
-A ideia é usar um único projeto para explorar, ao mesmo tempo, o "mundo web" e o "mundo mobile", entendendo onde as duas abordagens se encontram e onde elas divergem.
-
-## Padrão utilizado
-
-O projeto segue uma estrutura simples de **SPA (Single Page Application) em JavaScript puro (vanilla JS)**, sem frameworks como React, Vue ou Angular. Os principais pontos do padrão são:
-
-- **Roteamento por hash**: a navegação entre telas é controlada pelo hash da URL (`#buscar`, `#mapa`, `#enviar`, etc.), interceptado pelo evento `hashchange` em [src/js/main.js](src/js/main.js).
-- **Páginas como módulos**: cada tela vive em seu próprio arquivo dentro de [src/js/paginas/](src/js/paginas/) e exporta um objeto com sua `url` e uma função `pagina()` responsável por renderizar o conteúdo dentro do elemento `#app`.
-- **Mapa de rotas central**: [src/js/rotas/rotas.js](src/js/rotas/rotas.js) reúne todas as páginas disponíveis em uma lista única, usada tanto pelo roteador quanto pela navbar.
-- **Navbar dinâmica**: o componente em [src/js/navbar/navbar.js](src/js/navbar/navbar.js) é montado a partir do mesmo mapa de rotas, evitando duplicação entre navegação e páginas.
-- **Build com Vite**: o [Vite](https://vitejs.dev/) cuida do bundling e do servidor de desenvolvimento, gerando a pasta `dist/` que o Capacitor usa como `webDir` para empacotar o app nativo.
-
-## Como rodar o projeto
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) instalado (recomendado LTS mais recente)
-- npm (instalado junto com o Node.js)
-
-### Passo a passo
-
-1. Clone o repositório e acesse a pasta do projeto:
-
-   ```bash
-   git clone https://github.com/faustinopsy/ki-oferta
-   cd ki-oferta
-   ```
-
-2. Instale as dependências:
-
-   ```bash
-   npm install
-   ```
-
-3. Rode o projeto em modo de desenvolvimento (abre no navegador, com hot reload):
-
-   ```bash
-   npm run dev
-   ```
-
-4. Para gerar a versão de produção (usada também pelo Capacitor):
-
-   ```bash
-   npm run build
-   ```
-
-5. Para pré-visualizar o build de produção localmente:
-
-   ```bash
-   npm run preview
-   ```
-
-### Rodando como app nativo (Capacitor)
-
-Este projeto usa o [`@capacitor/create-app`](https://github.com/ionic-team/create-capacitor-app) como base. Para sincronizar o build web com os projetos nativos (Android/iOS), consulte a [documentação do Capacitor](https://capacitorjs.com/docs) — em resumo, após o `npm run build`, é necessário adicionar a plataforma desejada e sincronizar os arquivos web com o projeto nativo antes de rodar em um emulador ou dispositivo.
-
-## Status
-
-Este é um projeto didático em construção. Funcionalidades, estrutura de pastas e padrões podem mudar conforme o aprendizado avança.
-
-
-## Atividade – Framework CSS
-
-### Framework escolhido: Bootstrap
-
-#### A1. O que é o framework e qual abordagem ele segue?
-
-O Bootstrap é um framework CSS que oferece estilos, classes e componentes prontos para facilitar a criação de interfaces web. Ele utiliza uma abordagem responsiva e mobile-first, priorizando inicialmente telas menores e permitindo adaptar a interface para diferentes tamanhos de tela.
-
-#### A2. Como você incluiu o framework na página?
-
-O Bootstrap não foi incluído na implementação da tela do KiOferta. O framework foi pesquisado para esta atividade, mas o grupo optou por desenvolver a interface utilizando CSS próprio, com recursos nativos como Flexbox e Grid.
-
-#### A3. Cite três benefícios percebidos ao usar.
-
-Embora o Bootstrap não tenha sido utilizado na implementação final da tela, durante a pesquisa identificamos como benefícios a disponibilidade de classes prontas, a facilidade para desenvolver layouts responsivos e a possibilidade de reduzir a quantidade de CSS que precisaria ser escrita manualmente.
-
-#### A4. Cite duas limitações ou desvantagens.
-
-Uma limitação é que o Bootstrap pode deixar a interface com uma aparência padronizada quando seus componentes são utilizados sem personalização. Outra é que, em um projeto que já possui cores, tipografia e espaçamentos próprios, pode ser necessário sobrescrever estilos do framework, aumentando o trabalho de personalização.
-
-#### A5. O framework estiliza usando classes ou IDs? Por quê?
-
-O Bootstrap utiliza principalmente classes CSS. As classes podem ser reutilizadas em vários elementos da página, enquanto um ID deve identificar um elemento específico. O uso de classes também facilita a aplicação e a personalização dos estilos em diferentes partes da interface.
-
-#### A6. Fontes
-
-1. Bootstrap. "Get started with Bootstrap". Documentação oficial do Bootstrap.  
-   Endereço: https://getbootstrap.com/docs/5.3/getting-started/introduction/  
-   Acesso em: 15 set. 2026.
-
-2. MDN Web Docs. "CSS selectors". Mozilla Developer Network.  
-   Endereço: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors  
-   Acesso em: 15 set. 2026.
-
-### Decisão para o projeto
-
-O Bootstrap pode ser útil no KiOferta para facilitar a organização do layout e oferecer recursos responsivos. Entretanto, o estudo de caso já define cores, tipografia e espaçamentos próprios. Por isso, consideramos mais adequado utilizá-lo apenas quando seus recursos trouxerem alguma vantagem para a estrutura da interface, mantendo o CSS próprio para preservar a identidade visual definida para o KiOferta.
+```bash
+npm start
+```
