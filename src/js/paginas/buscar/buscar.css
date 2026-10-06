@@ -1,0 +1,168 @@
+.container-buscar {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 24px 16px 90px 16px;
+    width: 100%;
+}
+
+.hero-secao {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hero-titulo {
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--cor-texto);
+}
+
+.hero-descricao {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--cor-texto-mutado);
+}
+
+.secao-busca {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    background-color: var(--cor-superficie);
+    padding: 4px 6px 4px 14px;
+    box-shadow: var(--sombra-card);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grupo-input:focus-within {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px var(--cor-destaque-fundo);
+}
+
+.icone-busca-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 22px;
+    color: var(--cor-texto-mutado);
+}
+
+#input-busca {
+    flex: 1 1 auto;
+    border: none;
+    outline: none;
+    height: 44px;
+    font-size: 0.95rem;
+    padding: 0 10px;
+    color: var(--cor-texto);
+    background: transparent;
+}
+
+#input-busca::placeholder {
+    color: var(--cor-texto-mutado);
+    font-weight: 400;
+}
+
+#btn-busca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 42px;
+    height: 42px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#btn-busca:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+.categorias-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cabecalho-categorias {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.titulo-categorias {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--cor-texto);
+}
+
+.categoria-lista {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-categoria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 calc(50% - 10px);
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    background-color: var(--cor-superficie);
+    box-shadow: var(--sombra-card);
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.lista-categoria:hover {
+    border-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-fundo);
+}
+
+.categoria-nome {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.categoria-seta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 16px;
+    color: var(--cor-texto-mutado);
+    transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.lista-categoria:hover .categoria-seta {
+    color: var(--cor-destaque);
+    transform: translateX(2px);
+}

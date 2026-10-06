@@ -1,69 +1,86 @@
-/* ensure sizing includes padding/borders */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-.navbar-bottom{
+.navbar-bottom {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 72px;
+    height: 64px;
     padding: 0 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
-    border-top: 1px solid #da9797;
-    background: #fff;
+    border-top: 1px solid var(--cor-borda);
+    background: var(--cor-superficie);
     z-index: 1000;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     max-width: 440px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 12px;
-    padding: 8px 0;
+    padding: 4px 0;
 }
 
-.navbar-item{
+.navbar-item {
     text-decoration: none;
-    color: #5a5959;
+    color: var(--cor-texto-mutado);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    padding: 6px 8px;
+    gap: 4px;
+    padding: 4px 8px;
     min-width: 48px;
+    font-size: 0.78rem;
+    transition: color 0.15s ease;
 }
 
-.navbar-item_icon{
+.navbar-item_icon {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 42px;
-    font-size: 1.2rem;
-    gap: 5px;
+    font-size: 1.1rem;
+    gap: 4px;
     text-align: center;
 }
 
 .navbar-item:focus,
-.navbar-item:hover{
-    opacity: 0.95;
+.navbar-item:hover {
+    color: var(--cor-destaque);
 }
 
-/* ensure the navbar doesn't overflow small screens */
+.navbar-chat-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: var(--cor-texto-mutado);
+    cursor: pointer;
+    padding: 6px;
+    transition: color 0.15s ease;
+}
+
+.navbar-chat-button:hover {
+    color: var(--cor-destaque);
+}
+
 @media (max-width: 480px) {
     .navbar {
         gap: 8px;
-        padding: 6px 6px;
+        padding: 4px;
     }
-    .navbar-item { padding: 6px 4px; }
+    .navbar-item { 
+        padding: 4px 2px; 
+    }
 }
-

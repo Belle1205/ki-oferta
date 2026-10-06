@@ -2,7 +2,6 @@ import './produtos.css';
 import listaDeLivros from '../../dadosMockados/dados.js';
 import { createIcons, icons } from 'lucide';
 
-// Estado da ordenação atual (padrão: menor distância)
 let ordenacaoAtual = 'distancia';
 
 function obterParametrosURL() {
@@ -22,10 +21,8 @@ function filtrarLivros(termo, categoria) {
         const termoBusca = termo.toLowerCase();
         const categoriaFiltro = categoria.toLowerCase();
 
-        // Filtro por categoria (se especificada)
         const bateCategoria = !categoria || livro.disciplina.toLowerCase() === categoriaFiltro;
 
-        // Filtro por termo (se especificado) procurando no título, disciplina ou conservação
         const bateTermo = !termo || 
             livro.titulo.toLowerCase().includes(termoBusca) ||
             livro.disciplina.toLowerCase().includes(termoBusca) ||
@@ -38,10 +35,8 @@ function filtrarLivros(termo, categoria) {
 function ordenarLivros(livros, criterio) {
     const copia = [...livros];
     if (criterio === 'ano') {
-        // Critério 1: Edição mais recente primeiro
         return copia.sort((a, b) => b.ano - a.ano);
     }
-    // Critério 2: Menor distância primeiro
     return copia.sort((a, b) => a.distancia - b.distancia);
 }
 
@@ -50,43 +45,53 @@ function produtos(app) {
     const livrosFiltrados = filtrarLivros(termo, categoria);
     const livrosOrdenados = ordenarLivros(livrosFiltrados, ordenacaoAtual);
 
-    const textoFiltroAtivo = termo 
-        ? `Busca: "${termo}"` 
-        : categoria 
-        ? `Disciplina: "${categoria}"` 
-        : null;
+    const valorInput = termo || (categoria ? categoria : '');
 
     app.innerHTML = `
         <div class="container-resultados">
-            <header class="cabecalho-resultados">
-                <div class="cabecalho-titulo-linha">
-                    <h1 class="titulo-resultados">Livros Disponíveis</h1>
+            <section class="secao-pesquisa-topo">
+                <form id="form-busca-topo" class="form-busca-topo">
+                    <span class="icone-busca-topo">
+                        <i data-lucide="search"></i>
+                    </span>
+                    <input 
+                        type="text" 
+                        id="input-busca-topo" 
+                        class="input-busca-topo"
+                        placeholder="Buscar por livro ou disciplina..."
+                        aria-label="campo busca de livro"
+                        value="${valorInput}"
+                        autocomplete="off"
+                    />
                     ${
-                        textoFiltroAtivo 
-                            ? `<span class="badge-termo">
-                                 ${textoFiltroAtivo}
-                                 <button class="btn-limpar-termo" id="btn-limpar-busca" title="Limpar busca">
-                                     <i data-lucide="x"></i>
-                                 </button>
-                               </span>`
+                        valorInput 
+                            ? `<button type="button" id="btn-limpar-busca-topo" class="btn-limpar-topo" title="Limpar busca">
+                                 <i data-lucide="x"></i>
+                               </button>`
                             : ''
                     }
-                </div>
+                    <button type="submit" class="btn-pesquisar-topo" title="Pesquisar">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </form>
+            </section>
 
-                <div class="barra-controles">
-                    <span class="total-registros">
-                        <i data-lucide="book-open"></i>
-                        ${livrosFiltrados.length} ${livrosFiltrados.length === 1 ? 'livro encontrado' : 'livros encontrados'}
-                    </span>
+            <header class="barra-controles">
+                <span class="total-registros">
+                    <i data-lucide="book-open"></i>
+                    ${livrosFiltrados.length} ${livrosFiltrados.length === 1 ? 'livro encontrado' : 'livros encontrados'}
+                </span>
 
-                    <div class="grupo-ordenacao">
-                        <label for="select-ordenacao" class="label-ordenacao">
-                            <i data-lucide="arrow-up-down"></i> Ordenar:
-                        </label>
+                <div class="controle-ordenacao">
+                    <label for="select-ordenacao" class="label-ordenacao">Ordenar:</label>
+                    <div class="select-wrapper">
                         <select id="select-ordenacao" class="select-ordenacao" aria-label="Critério de ordenação">
                             <option value="distancia" ${ordenacaoAtual === 'distancia' ? 'selected' : ''}>Mais próximos</option>
-                            <option value="ano" ${ordenacaoAtual === 'ano' ? 'selected' : ''}>Mais recentes (ano)</option>
+                            <option value="ano" ${ordenacaoAtual === 'ano' ? 'selected' : ''}>Mais recentes</option>
                         </select>
+                        <span class="select-icone">
+                            <i data-lucide="chevron-down"></i>
+                        </span>
                     </div>
                 </div>
             </header>
@@ -97,11 +102,11 @@ function produtos(app) {
                         ? `
                         <div class="estado-vazio">
                             <div class="estado-vazio-icone">
-                                <i data-lucide="search-x"></i>
+                                <i data-lucide="book-open"></i>
                             </div>
                             <h2 class="estado-vazio-titulo">Nenhum livro encontrado</h2>
                             <p class="estado-vazio-texto">
-                                Não encontramos nenhum exemplar para os filtros selecionados. Tente buscar por outra disciplina ou palavra-chave.
+                                Não encontramos exemplares para o filtro aplicado. Tente pesquisar por outro título ou matéria.
                             </p>
                             <a href="#buscar" class="btn-voltar-inicio">
                                 <i data-lucide="arrow-left"></i> Fazer nova busca
@@ -139,18 +144,33 @@ function produtos(app) {
 }
 
 function adicionarEventos(app) {
+    const formBuscaTopo = document.getElementById('form-busca-topo');
+    const inputBuscaTopo = document.getElementById('input-busca-topo');
+    const btnLimparTopo = document.getElementById('btn-limpar-busca-topo');
     const selectOrdenacao = document.getElementById('select-ordenacao');
+
+    if (formBuscaTopo && inputBuscaTopo) {
+        formBuscaTopo.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const novoTermo = inputBuscaTopo.value.trim();
+            if (novoTermo) {
+                window.location.hash = `#produtos?q=${encodeURIComponent(novoTermo)}`;
+            } else {
+                window.location.hash = '#produtos';
+            }
+        });
+    }
+
+    if (btnLimparTopo) {
+        btnLimparTopo.addEventListener('click', () => {
+            window.location.hash = '#produtos';
+        });
+    }
+
     if (selectOrdenacao) {
         selectOrdenacao.addEventListener('change', (e) => {
             ordenacaoAtual = e.target.value;
             produtos(app);
-        });
-    }
-
-    const btnLimpar = document.getElementById('btn-limpar-busca');
-    if (btnLimpar) {
-        btnLimpar.addEventListener('click', () => {
-            window.location.hash = '#produtos';
         });
     }
 }

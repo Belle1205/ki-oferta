@@ -1,4 +1,4 @@
-import buscar from '../paginas/buscar.js'
+import buscar from '../paginas/buscar/buscar.js'
 import produtos from '../paginas/produtos/produtos.js'
 import enviar from '../paginas/enviar.js'
 import mapa from '../paginas/mapa.js'

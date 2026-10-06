@@ -1,55 +1,96 @@
-/* Tela de Resultados - 100% Flexbox (Regras L1, L2, L3 e L4) */
 .container-resultados {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px 12px 90px 12px; /* Espaço para a navbar inferior */
+    padding: 16px 16px 90px 16px;
     width: 100%;
 }
 
-.cabecalho-resultados {
+.secao-pesquisa-topo {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    width: 100%;
 }
 
-.cabecalho-titulo-linha {
+.form-busca-topo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-lg);
+    background-color: var(--cor-superficie);
+    padding: 3px 4px 3px 12px;
+    box-shadow: var(--sombra-card);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-busca-topo:focus-within {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 3px var(--cor-destaque-fundo);
+}
+
+.icone-busca-topo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 8px;
+    justify-content: center;
+    flex: 0 0 20px;
+    color: var(--cor-texto-mutado);
 }
 
-.titulo-resultados {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--cor-texto, #1e293b);
-}
-
-.badge-termo {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    border-radius: var(--radius-sm, 6px);
-    background-color: var(--cor-badge-fundo, #eff6ff);
-    color: var(--cor-badge-texto, #1d4ed8);
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.btn-limpar-termo {
-    background: transparent;
+.input-busca-topo {
+    flex: 1 1 auto;
     border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: var(--cor-badge-texto, #1d4ed8);
-    padding: 0;
+    outline: none;
+    height: 40px;
+    font-size: 0.92rem;
+    padding: 0 8px;
+    color: var(--cor-texto);
+    background: transparent;
 }
 
-/* Barra de controles: contagem e seleção de ordenação (Regras L1 e L2) */
+.input-busca-topo::placeholder {
+    color: var(--cor-texto-mutado);
+}
+
+.btn-limpar-topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--cor-badge-fundo);
+    color: var(--cor-texto-mutado);
+    cursor: pointer;
+    margin-right: 6px;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-limpar-topo:hover {
+    color: var(--cor-destaque);
+    background-color: var(--cor-destaque-fundo);
+}
+
+.btn-pesquisar-topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 38px;
+    height: 38px;
+    border: none;
+    border-radius: var(--radius-md);
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-pesquisar-topo:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
 .barra-controles {
     display: flex;
     flex-direction: row;
@@ -57,44 +98,66 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--cor-borda, #e2e8f0);
+    padding: 2px 0 10px 0;
+    border-bottom: 1px solid var(--cor-borda);
 }
 
 .total-registros {
-    font-size: 0.9rem;
-    color: var(--cor-texto-mutado, #64748b);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.grupo-ordenacao {
+    font-size: 0.88rem;
+    color: var(--cor-texto-mutado);
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.label-ordenacao {
-    font-size: 0.85rem;
-    color: var(--cor-texto-mutado, #64748b);
+.controle-ordenacao {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
+}
+
+.label-ordenacao {
+    font-size: 0.82rem;
+    color: var(--cor-texto-mutado);
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .select-ordenacao {
-    border: 1px solid var(--cor-borda, #cbd5e1);
-    border-radius: var(--radius-sm, 6px);
-    padding: 6px 8px;
-    background-color: var(--cor-superficie, #ffffff);
-    color: var(--cor-texto, #1e293b);
-    font-size: 0.85rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    padding: 6px 28px 6px 12px;
+    background-color: var(--cor-superficie);
+    color: var(--cor-texto);
+    font-size: 0.82rem;
+    font-weight: 500;
     outline: none;
     cursor: pointer;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* Lista de livros - Contêiner flex vertical */
+.select-ordenacao:focus,
+.select-ordenacao:hover {
+    border-color: var(--cor-destaque);
+}
+
+.select-icone {
+    position: absolute;
+    right: 8px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto-mutado);
+}
+
 .lista-livros {
     display: flex;
     flex-direction: column;
@@ -102,36 +165,34 @@
     width: 100%;
 }
 
-/* Card do livro - Layout em Flexbox (Regras L1 e L2: sem width fixo em filhos) */
 .card-livro {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    gap: 12px;
+    gap: 14px;
     padding: 12px;
-    background-color: var(--cor-superficie, #ffffff);
-    border: 1px solid var(--cor-borda, #e2e8f0);
-    border-radius: var(--radius-md, 10px);
-    box-shadow: var(--sombra-card, 0 2px 8px rgba(0, 0, 0, 0.06));
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius-md);
+    box-shadow: var(--sombra-card);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card-livro:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
-    border-color: var(--cor-destaque, #0284c7);
+    border-color: var(--cor-borda-hover);
+    box-shadow: var(--sombra-flutuante);
 }
 
 .card-livro-capa {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 76px; /* L2: flex-basis em vez de width fixo */
-    border-radius: var(--radius-sm, 6px);
+    flex: 0 0 72px;
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    background-color: var(--cor-borda, #e2e8f0);
+    background-color: var(--cor-badge-fundo);
 }
 
 .card-livro-capa img {
@@ -145,25 +206,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1 1 auto; /* L2: expande para preencher o card */
+    flex: 1 1 auto;
     gap: 6px;
-    min-width: 0; /* Previne overflow de textos longos no flex */
+    min-width: 0;
 }
 
 .card-livro-disciplina {
     align-self: flex-start;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--cor-destaque, #0284c7);
-    letter-spacing: 0.5px;
+    color: var(--cor-destaque);
+    letter-spacing: 0.4px;
 }
 
 .card-livro-titulo {
     font-size: 0.95rem;
     font-weight: 600;
-    line-height: 1.3;
-    color: var(--cor-texto, #1e293b);
+    line-height: 1.35;
+    color: var(--cor-texto);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -176,13 +237,14 @@
     flex-wrap: wrap;
     gap: 8px;
     font-size: 0.8rem;
-    color: var(--cor-texto-mutado, #64748b);
+    color: var(--cor-texto-mutado);
 }
 
 .tag-conservacao {
     padding: 2px 6px;
-    border-radius: 4px;
-    background-color: #f1f5f9;
+    border-radius: var(--radius-sm);
+    background-color: var(--cor-badge-fundo);
+    color: var(--cor-badge-texto);
     font-size: 0.75rem;
     font-weight: 500;
 }
@@ -192,7 +254,7 @@
     align-items: center;
     justify-content: space-between;
     font-size: 0.8rem;
-    color: var(--cor-texto-mutado, #64748b);
+    color: var(--cor-texto-mutado);
     margin-top: 2px;
 }
 
@@ -201,49 +263,48 @@
     align-items: center;
     gap: 4px;
     font-weight: 600;
-    color: var(--cor-destaque, #0284c7);
+    color: var(--cor-primaria);
 }
 
 .card-livro-publicador {
     font-size: 0.75rem;
 }
 
-/* Estado Vazio - Contêiner flex centralizado (Regras L1 e L4) */
 .estado-vazio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 16px;
-    gap: 16px;
-    background-color: var(--cor-superficie, #ffffff);
-    border: 1px dashed var(--cor-borda, #cbd5e1);
-    border-radius: var(--radius-md, 10px);
+    padding: 48px 16px;
+    gap: 14px;
+    background-color: var(--cor-superficie);
+    border: 1px dashed var(--cor-borda);
+    border-radius: var(--radius-md);
 }
 
 .estado-vazio-icone {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-    background-color: var(--cor-aviso-fundo, #fef2f2);
-    color: var(--cor-aviso-texto, #b91c1c);
+    background-color: var(--cor-badge-fundo);
+    color: var(--cor-primaria);
 }
 
 .estado-vazio-titulo {
     font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--cor-texto, #1e293b);
+    font-weight: 600;
+    color: var(--cor-texto);
 }
 
 .estado-vazio-texto {
     font-size: 0.9rem;
-    color: var(--cor-texto-mutado, #64748b);
-    max-width: 280px;
-    line-height: 1.4;
+    color: var(--cor-texto-mutado);
+    max-width: 260px;
+    line-height: 1.45;
 }
 
 .btn-voltar-inicio {
@@ -251,18 +312,19 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 10px 16px;
-    border-radius: var(--radius-sm, 6px);
-    background-color: var(--cor-primaria, #2563eb);
+    padding: 10px 18px;
+    border-radius: var(--radius-md);
+    background-color: var(--cor-destaque);
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
     cursor: pointer;
     border: none;
     transition: background-color 0.2s ease;
+    margin-top: 4px;
 }
 
 .btn-voltar-inicio:hover {
-    background-color: var(--cor-primaria-hover, #1d4ed8);
+    background-color: var(--cor-destaque-hover);
 }

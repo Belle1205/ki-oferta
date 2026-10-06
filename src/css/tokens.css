@@ -1,19 +1,22 @@
 :root {
-  --cor-fundo: #f8fafc;
+  --cor-fundo: #fbfaf8;
   --cor-superficie: #ffffff;
-  --cor-primaria: #2563eb;
-  --cor-primaria-hover: #1d4ed8;
-  --cor-destaque: #0284c7;
-  --cor-texto: #1e293b;
-  --cor-texto-mutado: #64748b;
-  --cor-borda: #e2e8f0;
-  --cor-borda-hover: #cbd5e1;
-  --cor-badge-fundo: #eff6ff;
-  --cor-badge-texto: #1d4ed8;
-  --cor-aviso-fundo: #fef2f2;
-  --cor-aviso-texto: #b91c1c;
+  --cor-primaria: #4a3427;
+  --cor-primaria-hover: #36251b;
+  --cor-destaque: #c85a17;
+  --cor-destaque-hover: #ad4c12;
+  --cor-destaque-fundo: #fef5ee;
+  --cor-texto: #2c1e16;
+  --cor-texto-mutado: #786b62;
+  --cor-borda: #ece7e1;
+  --cor-borda-hover: #dcd5cb;
+  --cor-badge-fundo: #f4ede6;
+  --cor-badge-texto: #4a3427;
+  --cor-aviso-fundo: #fdf2f0;
+  --cor-aviso-texto: #9c2d1b;
   --radius-sm: 6px;
   --radius-md: 10px;
-  --radius-lg: 16px;
-  --sombra-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --radius-lg: 14px;
+  --sombra-card: 0 1px 4px rgba(60, 42, 33, 0.04);
+  --sombra-flutuante: 0 4px 12px rgba(60, 42, 33, 0.07);
 }

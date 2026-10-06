@@ -1,4 +1,3 @@
-// Dados mockados para Troca de Livros (Requisito E4: mínimo 12 registros, 4 publicadores, todo registro com id e id do publicador)
 const listaDeLivros = [
   {
     id: 1,
