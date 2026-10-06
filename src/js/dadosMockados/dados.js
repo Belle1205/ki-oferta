@@ -8,7 +8,7 @@ const listaDeLivros = [
     distancia: 250,
     publicadorId: 1,
     publicadorNome: "Lucas Silva",
-    img: "https://m.media-amazon.com/images/I/81c81v5p-2L._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRra6T-ZbL4T7I4saYzMjJJQQcIKCSFGi_g3wB0fdtg-A&s=10"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const listaDeLivros = [
     distancia: 400,
     publicadorId: 2,
     publicadorNome: "Mariana Souza",
-    img: "https://m.media-amazon.com/images/I/71Y+mJ6a6CL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8l1dK3-CwcTClpdyN6-IJi1NdbMp6hYTiUgVdcK_wiA&s"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const listaDeLivros = [
     distancia: 120,
     publicadorId: 3,
     publicadorNome: "Carlos Eduardo",
-    img: "https://m.media-amazon.com/images/I/81q+kQh9YdL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzG9tfn2y_awG82x3AQMGgSpNKmwZ2-xs3VCNMk5eMHw&s"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const listaDeLivros = [
     distancia: 800,
     publicadorId: 4,
     publicadorNome: "Beatriz Lima",
-    img: "https://m.media-amazon.com/images/I/71gPspuY9CL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6W9QK8mav4iA9flD1UFineW2IbwCJ9t75INd61KPYSA&s=10"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ const listaDeLivros = [
     distancia: 550,
     publicadorId: 1,
     publicadorNome: "Lucas Silva",
-    img: "https://m.media-amazon.com/images/I/81+G6BqQ8oL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH8-00iQo4bBZqHWKGN4EbKVE4Tj4rUYPXY3xdkyZukw&s=10"
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const listaDeLivros = [
     distancia: 300,
     publicadorId: 2,
     publicadorNome: "Mariana Souza",
-    img: "https://m.media-amazon.com/images/I/81s41zXm7lL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKrKnmBc3zcXH_VBvuWGGsW76Jm4USKmbFbyM6osLyA&s"
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ const listaDeLivros = [
     distancia: 150,
     publicadorId: 3,
     publicadorNome: "Carlos Eduardo",
-    img: "https://m.media-amazon.com/images/I/71V2S1W8iJL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwWjAukAL3Nrw2gpMm0XnqjHk8zSDiK7L6pAnapcZaMw&s=10"
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const listaDeLivros = [
     distancia: 700,
     publicadorId: 4,
     publicadorNome: "Beatriz Lima",
-    img: "https://m.media-amazon.com/images/I/61Nqf1f1h4L._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREpaRJvJeUHOQEsHVU6SEMl7sJf3myLvKgdSJbHpTVXg&s=10"
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ const listaDeLivros = [
     distancia: 950,
     publicadorId: 1,
     publicadorNome: "Lucas Silva",
-    img: "https://m.media-amazon.com/images/I/81sQZ5mOaKL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKfBSakhcBukJjRY-6dap0m0LcbL0aGmHuKwhpYUZKfw&s=10"
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ const listaDeLivros = [
     distancia: 180,
     publicadorId: 2,
     publicadorNome: "Mariana Souza",
-    img: "https://m.media-amazon.com/images/I/71u9sW48pUL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMb9eloltg2L-bUYxAqk1GWwPux6EOd9HeHdaf3--TA&s"
   },
   {
     id: 11,
@@ -118,7 +118,7 @@ const listaDeLivros = [
     distancia: 320,
     publicadorId: 3,
     publicadorNome: "Carlos Eduardo",
-    img: "https://m.media-amazon.com/images/I/71EwW3lS5eL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnBjn6nGjCXvifx8QyJzZa3IQj0V2OuTsgCjYY2FyHsQ&s=10"
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ const listaDeLivros = [
     distancia: 500,
     publicadorId: 4,
     publicadorNome: "Beatriz Lima",
-    img: "https://m.media-amazon.com/images/I/71dK4vI1YpL._SY466_.jpg"
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8iejcBCMRFNYPQO44XeL5_tFeeEXJhib49h7-MsKgVw&s=10"
   }
 ];
 
