@@ -5,6 +5,7 @@ async function conta(app) {
 }
 export default { 
   url: '#conta',
-  label: 'conta',
-  icon: "circle-user-round",
-  pagina: conta };
+   label: 'conta',
+   icon: "user-round-arrow-left",
+    pagina: conta 
+  };

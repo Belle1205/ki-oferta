@@ -1,11 +1,9 @@
 async function favorito(app) {
   app.innerHTML = ``;
 }
-export default 
-{ 
+export default { 
   url: '#favorito',
-  label: 'favorito',
-  icon: "star",
-  pagina: favorito 
-
-};
+   label: 'favorito',
+   icon: "bookmark",
+    pagina: favorito 
+  };
