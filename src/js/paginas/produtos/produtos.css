@@ -189,10 +189,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 72px;
+    flex: 0 0 76px;
+    aspect-ratio: 2 / 3;
     border-radius: var(--radius-sm);
     overflow: hidden;
     background-color: var(--cor-badge-fundo);
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 1px 3px rgba(44, 30, 22, 0.08);
 }
 
 .card-livro-capa img {

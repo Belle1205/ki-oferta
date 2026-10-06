@@ -177,7 +177,7 @@ function adicionarEventos(app) {
 
 export default { 
     url: "#produtos",
-    label: "produtos",
-    icon: "shopping-basket",
+    label: "Biblioteca",
+    icon: "library",
     pagina: produtos
 };
