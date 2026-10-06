@@ -95,7 +95,7 @@ const listaDeLivros = [
     ano: 2017,
     distancia: 950,
     publicadorId: 1,
-    publicadorNome: "Lucas Silva",
+    publicadorNome: "Felipe Silva",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKfBSakhcBukJjRY-6dap0m0LcbL0aGmHuKwhpYUZKfw&s=10"
   },
   {
