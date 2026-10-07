@@ -1,0 +1,105 @@
+.conta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  padding: var(--espaco-5) var(--espaco-4);
+}
+
+.conta__cabecalho,
+.conta__painel,
+.conta__publicacoes,
+.conta__lista,
+.conta__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+}
+
+.conta__subtitulo,
+.conta__email,
+.conta__ajuda,
+.conta__vazio {
+  color: var(--cor-texto-suave);
+}
+
+.conta__ajuda {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.conta__painel,
+.conta__formulario,
+.conta__item,
+.conta__vazio {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-4);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra);
+}
+
+.conta__campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.conta__campo input {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+}
+
+.conta__botao {
+  border: 0;
+  border-radius: var(--raio);
+  padding: var(--espaco-3) var(--espaco-4);
+  background: var(--cor-destaque);
+  color: #fff;
+  font-weight: 700;
+}
+
+.conta__botao--sair {
+  align-self: flex-start;
+}
+
+.conta__erro {
+  color: var(--cor-erro);
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.conta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.conta__item {
+  color: inherit;
+  text-decoration: none;
+}
+
+.conta__detalhe-livro {
+  font-weight: 700;
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+/*
+ * Classe da tela comercial recebida, mantida comentada após substituir preço
+ * por disciplina, conservação e edição do exemplar.
+ *
+ * .conta__preco {
+ *   font-weight: 700;
+ * }
+ */
+
+.conta__item:hover {
+  border-color: var(--cor-borda-hover);
+}
+
+.conta__item:focus-visible {
+  outline: 2px solid var(--cor-primaria);
+  outline-offset: 2px;
+}

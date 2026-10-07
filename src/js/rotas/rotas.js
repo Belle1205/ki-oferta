@@ -6,6 +6,7 @@ import mapa from '../paginas/mapa.js'
 import favorito from '../paginas/favorito.js'
 import conta from '../paginas/conta.js'
 import sorteio from '../paginas/sorteios/sorteio.js'
+import naoEncontrada from '../paginas/naoEncontrada/naoEncontrada.js'
 
 const mapaderotas = [
     buscar,
@@ -18,4 +19,4 @@ const mapaderotas = [
     sorteio
 ]
 
-export { mapaderotas }
+export { mapaderotas, naoEncontrada }

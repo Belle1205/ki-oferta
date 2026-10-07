@@ -75,34 +75,38 @@ function detalhe(app) {
       </a>
 
       <article class="detalhe__cartao">
-        <div class="detalhe__capa">
-          <img src="${imagem}" alt="Capa de ${titulo}" />
+        <div class="detalhe__resumo">
+          <div class="detalhe__capa">
+            <img src="${imagem}" alt="Capa de ${titulo}" />
+          </div>
+          <div class="detalhe__conteudo">
+            <span class="detalhe__categoria">${disciplina}</span>
+            <h1>${titulo}</h1>
+            ${autor ? `<p class="detalhe__autor">Por ${autor}</p>` : ''}
+            <p class="detalhe__descricao">${descricao}</p>
+          </div>
         </div>
-        <div class="detalhe__conteudo">
-          <span class="detalhe__categoria">${disciplina}</span>
-          <h1>${titulo}</h1>
-          ${autor ? `<p class="detalhe__autor">Por ${autor}</p>` : ''}
-          <p class="detalhe__descricao">${descricao}</p>
 
-          <dl class="detalhe__informacoes">
-            <div class="detalhe__informacao">
-              <dt>Conservação</dt>
-              <dd>${estado}</dd>
-            </div>
-            <div class="detalhe__informacao">
-              <dt>Edição</dt>
-              <dd>${escaparHTML(livro.ano)}</dd>
-            </div>
-            <div class="detalhe__informacao">
-              <dt>Distância aproximada</dt>
-              <dd>${escaparHTML(livro.distancia)} m</dd>
-            </div>
-            <div class="detalhe__informacao">
-              <dt>Local da troca</dt>
-              <dd>${local}</dd>
-            </div>
-          </dl>
+        <dl class="detalhe__informacoes">
+          <div class="detalhe__informacao">
+            <dt>Conservação</dt>
+            <dd>${estado}</dd>
+          </div>
+          <div class="detalhe__informacao">
+            <dt>Edição</dt>
+            <dd>${escaparHTML(livro.ano)}</dd>
+          </div>
+          <div class="detalhe__informacao">
+            <dt>Distância aproximada</dt>
+            <dd>${escaparHTML(livro.distancia)} m</dd>
+          </div>
+          <div class="detalhe__informacao">
+            <dt>Local da troca</dt>
+            <dd>${local}</dd>
+          </div>
+        </dl>
 
+        <div class="detalhe__troca-info">
           <section class="detalhe__troca">
             <h2>O que o publicador procura</h2>
             <p>${trocaPor}</p>

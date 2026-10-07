@@ -25,3 +25,19 @@ body {
   border-left: 1px solid var(--cor-borda);
   box-shadow: 0 0 24px rgba(60, 42, 33, 0.08);
 }
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
