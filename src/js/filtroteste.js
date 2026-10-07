@@ -1,8 +1,8 @@
 const livros = [
-    { titulo: "php", preco: 15.60, descricao: "aprenda php na prática"  },
-    { titulo: "python", preco: 20.00, descricao: "aprenda python na prática" },
-    { titulo: "java", preco: 30.00, descricao: "aprenda java na prática"  }
+    { titulo: "Fundamentos de Matemática Elementar", disciplina: "Matemática", conservacao: "Seminovo" },
+    { titulo: "Dom Casmurro", disciplina: "Literatura", conservacao: "Novo" },
+    { titulo: "Os Fundamentos da Física", disciplina: "Física", conservacao: "Usado" }
 ]
 
-const livroselecionado = livros.filter(livro => livro.preco >= 20)
-console.log(livroselecionado)
+const livrosSelecionados = livros.filter(livro => livro.conservacao === "Novo")
+console.log(livrosSelecionados)

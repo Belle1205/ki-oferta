@@ -1,0 +1,150 @@
+/* O formulário transforma a publicação de uma oferta em uma ficha de troca:
+   título, disciplina, conservação, edição e local são os dados do exemplar.
+   A estrutura usa Flexbox em todas as linhas, sem larguras fixas nos campos,
+   para continuar utilizável em telas estreitas como 360px. */
+.publicacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 16px 90px;
+}
+
+.publicacao__topo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.publicacao__voltar {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  color: var(--cor-texto-mutado);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.publicacao__topo h1 {
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.publicacao__topo p {
+  color: var(--cor-texto-mutado);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.publicacao__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-lg);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-card);
+}
+
+.publicacao__linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.publicacao__campo {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.publicacao__linha .publicacao__campo {
+  flex: 1 1 calc(50% - 12px);
+}
+
+.publicacao__campo label {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.publicacao__campo input,
+.publicacao__campo select,
+.publicacao__campo textarea {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.publicacao__campo textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.publicacao__campo input:focus,
+.publicacao__campo select:focus,
+.publicacao__campo textarea:focus {
+  border-color: var(--cor-borda-hover);
+  outline: 2px solid var(--cor-badge-fundo);
+  outline-offset: 1px;
+}
+
+.publicacao__perfil {
+  color: var(--cor-texto-mutado);
+  font-size: 0.85rem;
+}
+
+.publicacao__perfil strong {
+  color: var(--cor-texto);
+}
+
+/* O destaque aparece uma única vez como cor principal da ação de publicar.
+   No hover, a variação mais escura já definida nos tokens preserva o mesmo
+   papel visual sem introduzir uma nova cor de destaque. */
+.publicacao__botao {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--cor-destaque);
+  color: var(--cor-superficie);
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.publicacao__botao:hover {
+  background: var(--cor-destaque-hover);
+}
+
+.publicacao__mensagem {
+  color: var(--cor-primaria);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.publicacao__mensagem:empty {
+  display: none;
+}
+
+.publicacao__mensagem--erro {
+  color: var(--cor-aviso-texto);
+}
+
+.publicacao__mensagem a {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}

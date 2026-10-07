@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--cor-badge-fundo);
+}
+
 html,
 body {
   padding: 0;
@@ -14,4 +18,10 @@ body {
   color: var(--cor-texto);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  border-right: 1px solid var(--cor-borda);
+  border-left: 1px solid var(--cor-borda);
+  box-shadow: 0 0 24px rgba(60, 42, 33, 0.08);
 }

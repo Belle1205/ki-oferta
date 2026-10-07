@@ -4,6 +4,16 @@ import { createIcons, icons } from 'lucide';
 
 let ordenacaoAtual = 'distancia';
 
+function escaparHTML(valor) {
+    return String(valor).replace(/[&<>"']/g, caractere => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+    })[caractere]);
+}
+
 function obterParametrosURL() {
     const hash = window.location.hash || '';
     const partes = hash.split('?');
@@ -25,6 +35,7 @@ function filtrarLivros(termo, categoria) {
 
         const bateTermo = !termo || 
             livro.titulo.toLowerCase().includes(termoBusca) ||
+            (livro.autor || '').toLowerCase().includes(termoBusca) ||
             livro.disciplina.toLowerCase().includes(termoBusca) ||
             livro.conservacao.toLowerCase().includes(termoBusca);
 
@@ -60,7 +71,7 @@ function produtos(app) {
                         class="input-busca-topo"
                         placeholder="Buscar por livro ou disciplina..."
                         aria-label="campo busca de livro"
-                        value="${valorInput}"
+                        value="${escaparHTML(valorInput)}"
                         autocomplete="off"
                     />
                     ${
@@ -116,20 +127,20 @@ function produtos(app) {
                         : livrosOrdenados.map((livro) => `
                             <a href="#detalhe?id=${livro.id}" class="card-livro" title="Ver detalhes do livro">
                                 <div class="card-livro-capa">
-                                    <img src="${livro.img}" alt="Capa de ${livro.titulo}" loading="lazy" />
+                                    <img src="${escaparHTML(livro.img)}" alt="Capa de ${escaparHTML(livro.titulo)}" loading="lazy" />
                                 </div>
                                 <div class="card-livro-conteudo">
-                                    <span class="card-livro-disciplina">${livro.disciplina}</span>
-                                    <h3 class="card-livro-titulo">${livro.titulo}</h3>
+                                    <span class="card-livro-disciplina">${escaparHTML(livro.disciplina)}</span>
+                                    <h3 class="card-livro-titulo">${escaparHTML(livro.titulo)}</h3>
                                     <div class="card-livro-detalhes">
-                                        <span class="tag-conservacao">${livro.conservacao}</span>
-                                        <span>Ed. ${livro.ano}</span>
+                                        <span class="tag-conservacao">${escaparHTML(livro.conservacao)}</span>
+                                        <span>Ed. ${escaparHTML(livro.ano)}</span>
                                     </div>
                                     <div class="card-livro-rodape">
                                         <span class="card-livro-distancia">
-                                            <i data-lucide="map-pin"></i> ${livro.distancia}m de você
+                                            <i data-lucide="map-pin"></i> ${escaparHTML(livro.distancia)}m de você
                                         </span>
-                                        <span class="card-livro-publicador">Por: ${livro.publicadorNome}</span>
+                                        <span class="card-livro-publicador">Por: ${escaparHTML(livro.publicadorNome)}</span>
                                     </div>
                                 </div>
                             </a>

@@ -1,6 +1,7 @@
 import buscar from '../paginas/buscar/buscar.js'
 import produtos from '../paginas/produtos/produtos.js'
 import enviar from '../paginas/enviar.js'
+import detalhe from '../paginas/detalhe.js'
 import mapa from '../paginas/mapa.js'
 import favorito from '../paginas/favorito.js'
 import conta from '../paginas/conta.js'
@@ -9,6 +10,7 @@ import sorteio from '../paginas/sorteios/sorteio.js'
 const mapaderotas = [
     buscar,
     produtos,
+    detalhe,
     mapa,
     enviar,
     favorito,

@@ -1,0 +1,203 @@
+/* A tela de detalhe prioriza as informações que ajudam a decidir se a troca
+   vale a pena: conservação, edição, distância, local e preferência do dono.
+   A pilha vertical e a capa flexível mantêm o conteúdo legível em 360px. */
+.detalhe {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 16px 90px;
+}
+
+.detalhe__voltar {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  color: var(--cor-texto-mutado);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.detalhe__cartao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-lg);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra-card);
+}
+
+.detalhe__capa {
+  display: flex;
+  flex: 0 1 15rem;
+  align-self: center;
+  aspect-ratio: 2 / 3;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--radius-md);
+  background: var(--cor-badge-fundo);
+}
+
+.detalhe__capa img {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detalhe__conteudo {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.detalhe__categoria {
+  align-self: flex-start;
+  color: var(--cor-primaria);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.detalhe__conteudo h1 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.detalhe__autor,
+.detalhe__descricao,
+.detalhe__troca p,
+.detalhe__publicador p {
+  color: var(--cor-texto-mutado);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.detalhe__informacoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detalhe__informacao {
+  display: flex;
+  flex: 1 1 calc(50% - 10px);
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  background: var(--cor-fundo);
+  overflow-wrap: anywhere;
+}
+
+.detalhe__informacao dt {
+  color: var(--cor-texto-mutado);
+  font-size: 0.76rem;
+}
+
+.detalhe__informacao dd {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.detalhe__troca {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.detalhe__troca h2 {
+  font-size: 0.98rem;
+}
+
+.detalhe__publicador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.detalhe__publicador strong {
+  color: var(--cor-texto);
+}
+
+.detalhe__avatar {
+  display: flex;
+  flex: 0 0 40px;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cor-badge-fundo);
+  color: var(--cor-primaria);
+}
+
+/* O laranja é a única cor de destaque desta tela e identifica sua ação
+   principal; os outros elementos usam tokens neutros ou a cor primária. */
+.detalhe__acao,
+.detalhe__acao-secundaria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  background: var(--cor-destaque);
+  color: var(--cor-superficie);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+.detalhe__acao:hover,
+.detalhe__acao-secundaria:hover {
+  background: var(--cor-destaque-hover);
+}
+
+.detalhe__nao-encontrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 36px 16px;
+  border: 1px dashed var(--cor-borda);
+  border-radius: var(--radius-lg);
+  background: var(--cor-superficie);
+  text-align: center;
+}
+
+.detalhe__nao-encontrado > p {
+  color: var(--cor-texto-mutado);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.detalhe__acao-secundaria {
+  align-self: stretch;
+}
+
+@media (min-width: 600px) {
+  .detalhe__cartao {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .detalhe__capa {
+    flex: 0 1 13rem;
+  }
+}
