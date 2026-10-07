@@ -1,16 +1,36 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  max-width: 440px;
-  margin: 0 auto;
-  height: 100dvh;
-   border: 1px red solid;/* borda temporaria */
+html, body {
+  min-height: 100%;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte);
 }
 
+body {
+  max-width: 440px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--cor-superficie);
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+#app {
+  min-height: calc(100dvh - 72px);
+  padding-bottom: 88px;
+}
