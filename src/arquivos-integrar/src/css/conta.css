@@ -1,0 +1,74 @@
+.conta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  padding: var(--espaco-5) var(--espaco-4);
+}
+
+.conta__cabecalho,
+.conta__painel,
+.conta__publicacoes,
+.conta__lista,
+.conta__formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-3);
+}
+
+.conta__subtitulo,
+.conta__email,
+.conta__vazio {
+  color: var(--cor-texto-suave);
+}
+
+.conta__painel,
+.conta__formulario,
+.conta__item,
+.conta__vazio {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-4);
+  background: var(--cor-superficie);
+  box-shadow: var(--sombra);
+}
+
+.conta__campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.conta__campo input {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--espaco-3);
+}
+
+.conta__botao {
+  border: 0;
+  border-radius: var(--raio);
+  padding: var(--espaco-3) var(--espaco-4);
+  background: var(--cor-destaque);
+  color: #fff;
+  font-weight: 700;
+}
+
+.conta__botao--sair {
+  align-self: flex-start;
+}
+
+.conta__erro {
+  color: var(--cor-erro);
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.conta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-2);
+}
+
+.conta__preco {
+  font-weight: 700;
+}

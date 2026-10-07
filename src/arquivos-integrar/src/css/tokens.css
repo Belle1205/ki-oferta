@@ -1,0 +1,18 @@
+:root {
+  --cor-fundo: #f7f7f7;
+  --cor-superficie: #ffffff;
+  --cor-texto: #202124;
+  --cor-texto-suave: #666666;
+  --cor-borda: #dddddd;
+  --cor-destaque: #2e7d32;
+  --cor-erro: #b3261e;
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-5: 1.5rem;
+  --espaco-6: 2rem;
+  --raio: 0.75rem;
+  --sombra: 0 0.25rem 1rem rgba(0, 0, 0, 0.08);
+  --fonte: Arial, Helvetica, sans-serif;
+}
