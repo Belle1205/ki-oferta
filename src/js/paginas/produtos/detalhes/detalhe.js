@@ -1,5 +1,5 @@
 import './detalhe.css';
-import listaDeLivros from '../dadosMockados/dados.js';
+import listaDeLivros from '../../../dadosMockados/dados.js';
 import { createIcons, icons } from 'lucide';
 
 function escaparHTML(valor) {

@@ -1,5 +1,5 @@
-import listaDeLivros from '../dadosMockados/dados.js'
-import { entrar, sair, usuarioAtual } from '../sessao/sessao.js'
+import listaDeLivros from '../../dadosMockados/dados.js'
+import { entrar, sair, usuarioAtual } from '../../sessao/sessao.js'
 
 function escaparHTML(valor) {
   return String(valor).replace(/[&<>"']/g, caractere => ({

@@ -1,5 +1,5 @@
 import './enviar.css';
-import listaDeLivros from '../dadosMockados/dados.js';
+import listaDeLivros from '../../dadosMockados/dados.js';
 
 // O perfil fixo identifica o publicador da demonstração sem simular um login
 // ou criar uma sessão. O id e o nome existem nos registros mockados atuais.

@@ -1,5 +1,5 @@
 @import url('./tokens.css');
 @import url('./base.css');
 @import url('./navbar.css');
-@import url('./conta.css');
-@import url('./naoEncontrada.css');
+@import url('../js/paginas/conta/conta.css');
+@import url('../js/paginas/naoEncontrada/naoEncontrada.css');
